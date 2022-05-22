@@ -15,7 +15,11 @@ use Illuminate\Support\Facades\Redis;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('example');
+});
+
+Route::get('/applications', function () {
+    return \App\Models\Application::all();
 });
 
 Route::get('/test', function () {
